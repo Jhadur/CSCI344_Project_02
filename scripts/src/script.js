@@ -1,66 +1,14 @@
 /**
  * This is the entry point for our JavaScript program
  */
-
-function main1() {
-  //alert("hi there, and welcome to my page!");
-}  
-
-function addParagraph()  {
-  //$("body").append("<p>WHAT'S GOOD!!!</p>");
-  var p = $("<p>WHAT'S GOOD!!!</p>");
-  p.hide();
-  $("body").append(p);
-  //p.fadeIn();
-  p.slideDown();
-
-}
-
-function addAnswer() {
-	var sum = 0;
-		for (var i = 1; i < 1000; i++){
-            if (i%3==0 || i%5==0) {
-				sum+=i;
-			}
-		}
-	$("#result").append(sum + " ");
-	var sum = $("<p>" + sum + " </p>");
-	sum.hide();
-	$("body").append(sum);
-	sum.slideDown();
-}
-
-function addAnswer2() {
-	var sum2 = 0;
-		for (var i = 1; i < 1000; i++){
-            sum2=sum2+i;
-		}
-	$("#result2").append(sum2 + " ");
-	var sum2 = $("<p>" + sum2 + " </p>");
-	sum2.hide();
-	$("body").prepend(sum2);
-	sum2.fadeIn();
-}
-
-function addHeader() {
-	$("body").prepend("<h1>New Header</h1>");
-}
-
-main1();
-
-function main() {
-    //your code goes here
-    //alert("hello world!");
-
-
-    //your tasks
-
-    //1. Create a spotter and get it to insert tweets into the DOM
-	
+ function main() {
+ 
+ 
 	var count = 0;
 	var limit = false;
+	var tweetsearch = $("#text_phrase-input").val();
 	var s = new Spotter("twitter.search", 
-						{q: "#unca", period:120},
+						{q: tweetsearch, period:120},
 						{buffer:true, bufferTimeout:750}
 					    );
 					   
@@ -116,8 +64,8 @@ function main() {
     //4. Make the tweets slide down
     //5. Alternate the colors or the background of the tweets
     //6. Show a maximum of 10 tweets at a time (remove old tweets from the dom)
-
+	
+	
 }
-
 
 main();
