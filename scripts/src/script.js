@@ -1,19 +1,26 @@
 /**
  * This is the entry point for our JavaScript program
  */
- function main() {
+function main() {
  
  
+	
+	
 	var count = 0;
 	var limit = false;
 	var tweetsearch = $("#text_phrase-input").val();
+	
+	//$("#search").click(function() {
+	
+	//alert("hello!");
 	var s = new Spotter("twitter.search", 
-						{q: tweetsearch, period:120},
+						{q:"unca", period:120},
 						{buffer:true, bufferTimeout:750}
 					    );
-					   
+	//alert("hello Jason!");
+				   
 	s.register(function(tweet) {
-	
+	//alert("hello world!");
 	//$("#tweets").append("<p>"+tweet.text+"</p>");
 	
     //2. Add profile images (tweet.profile_image_url)
@@ -66,6 +73,7 @@
     //6. Show a maximum of 10 tweets at a time (remove old tweets from the dom)
 	
 	
-}
+	}
 
-main();
+	main();
+//});
