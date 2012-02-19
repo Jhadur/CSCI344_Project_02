@@ -1,26 +1,38 @@
 /**
  * This is the entry point for our JavaScript program
  */
-function main() {
+
  
- 
+$(function () {
+	
 	
 	
 	var count = 0;
 	var limit = false;
-	var tweetsearch = $("#text_phrase-input").val();
+	//var tweetsearch = $("#text_phrase-input")
+	var s
+	//$("#search_btn").click(function() {
 	
-	//$("#search").click(function() {
+	alert("hello!");
 	
-	//alert("hello!");
-	var s = new Spotter("twitter.search", 
-						{q:"unca", period:120},
+	$("#search_btn").click(function() {
+		
+		var tweetsearch = $("#text_phrase-input").val();
+		
+	alert("hello Jason!");
+	
+	
+	s = new Spotter("twitter.search", 
+						{q:tweetsearch, period:120},
 						{buffer:true, bufferTimeout:750}
 					    );
-	//alert("hello Jason!");
-				   
+	
+	
 	s.register(function(tweet) {
+	
+	
 	//alert("hello world!");
+	
 	//$("#tweets").append("<p>"+tweet.text+"</p>");
 	
     //2. Add profile images (tweet.profile_image_url)
@@ -67,13 +79,13 @@ function main() {
 	
 	s.start();
 	
+	});
     //3. Make the tweets occur so the most recent are at the top
     //4. Make the tweets slide down
     //5. Alternate the colors or the background of the tweets
     //6. Show a maximum of 10 tweets at a time (remove old tweets from the dom)
 	
 	
-	}
 
-	main();
-//});
+});
+
