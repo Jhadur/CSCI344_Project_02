@@ -9,18 +9,11 @@ $(function () {
 	
 	var count = 0;
 	var limit = false;
-	//var tweetsearch = $("#text_phrase-input")
 	var s
-	//$("#search_btn").click(function() {
-	
-	alert("hello!");
 	
 	$("#search_btn").click(function() {
 		
 		var tweetsearch = $("#text_phrase-input").val();
-		
-	alert("hello Jason!");
-	
 	
 	s = new Spotter("twitter.search", 
 						{q:tweetsearch, period:120},
@@ -43,7 +36,7 @@ $(function () {
 	profile_image.slideDown();*/
 	//"<li style='display:none;color:blue;background-color:white;'>"
 	
-	
+	s.stop();
 	count++;
 	
 		if (count === 11)
@@ -69,6 +62,7 @@ $(function () {
 	}
 	else {
 		color = "blue";
+		
 	}
 	var profile_image="<img src='"+tweet.profile_image_url+"' />";
 	var slide = $("<p class='"+color+" id="+count+"'>"+profile_image+tweet.text+"</p>");
