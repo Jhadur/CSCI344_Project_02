@@ -46,8 +46,8 @@ $(function () {
 		val = tweet.text
 		
 			phrase = new Phrase($('#phrase-module'), val);
-			$(window).scrollTop(scrl);
-			$('body, html').animate({scrollTop: $(this).offset().top}, 500);
+			$(window).scrollTop();
+			$('body, html').animate({scrollTop: $(this).offset()}, 500);
 		});
 
 
