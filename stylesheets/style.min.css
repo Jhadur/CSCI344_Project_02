@@ -87,6 +87,9 @@ article h1,
 article footer{ box-sizing:border-box;  -moz-box-sizing:border-box;  -webkit-box-sizing:border-box;  width:33.33333333%}
 
 }
+.tweetsearch {
+text-align:center
+}
 
 .a, .leg-a:before{background-color:rgb(184,64,30)}
 .b, .leg-b:before{background-color:rgb(9,92,130)}

@@ -1,18 +1,14 @@
 $(function () {
-	
-	
-	
-	var count = 0;
-	var limit = false;
+
 	var s
 	
-	$("#search_btn").click(function() {
+	$(".search_btn").click(function() {
 		
 		var tweetsearch = $("#text_phrase-input").val();
 	
 	s = new Spotter("twitter.search", 
-						{q:tweetsearch, period:120},
-						{buffer:true, bufferTimeout:750}
+						{q:tweetsearch, period:30},
+						{buffer:true, bufferTimeout:200}
 					    );
 	
 	
@@ -20,6 +16,9 @@ $(function () {
 
 	s.stop();
 			
+	// Code Below comes from 10k.aneventapart.com/2/Uploads/506/ with changes for my usage.
+	// This is for a school project and will not be used in anyway to make a profit
+	
 	$(function() {
 		phrase = false
 		val = tweet.text
