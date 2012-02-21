@@ -1,0 +1,12 @@
+1) Your application must use an input box that allows the user to type in a search term.
+
+2) It must use at least one Spotter object that is gathering data from Twitter
+
+3) It must use several variables that keep track of some kind of information relating to the search term
+
+4) It must use some form of jQuery animations, like fadeIn or fadeOut
+
+5) Your code must be organized as in Lab 3, and must be readable and maintainable
+
+Github requirements
+Your Github project must include at least 10 commits over the course of 5 different days. Each commit should have a meaningful commit message that explains exactly what was changed since the last iteration.
