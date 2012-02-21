@@ -42,38 +42,17 @@ $(function () {
 	
 	
 	$(function() {
-		var phrase = false, hash = $.trim(decodeURIComponent(window.location.hash).substring(1));
-		$('form').submit(function(e) {
-			e.preventDefault();
-			var val = $.trim($(tweet.text).val()), scrl = $(window).scrollTop();
-			window.location.hash = encodeURIComponent(val);
-			$(window).scrollTop(scrl);
-			if (!val.length) {
-				$('#phrase-module').fadeOut(300);
-				return;
-				}
+		phrase = false
+		val = tweet.text
+		
 			phrase = new Phrase($('#phrase-module'), val);
 			$(window).scrollTop(scrl);
 			$('body, html').animate({scrollTop: $(this).offset().top}, 500);
 		});
-		if (hash.length) {
-			$(tweet.text).val(hash);
-			$('form').submit();
-		}
-		var timer;
-			$(window).resize(function() {
-			if (timer) {
-				clearTimeout(timer);
-			}
-			timer = setTimeout(function() {
-				if ($('#phrase-module .pattern').width() !== $('#phrase-module .pattern canvas').width()) {
-					phrase.getData();
-					phrase.drawPattern();
-					phrase.makeImage();
-				}
-			}, 100);
-			});
-	});
+
+
+
+	
 function Phrase($elem, phrase) {
     var self = this;
     this.$phrase = $elem.find('.phrase');

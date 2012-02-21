@@ -3,6 +3,8 @@
   <head>
     <!--- styles --->
     <link rel="stylesheet" type="text/css" href="stylesheets/style.css" />
+	<link rel="stylesheet" type="text/css" href="stylesheets/style.min.css" />
+
 
     <!--- libraries --->
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
@@ -15,13 +17,19 @@
 
   <body>
     <h1>Lab 3</h1>
+	
 			<label for="phrase-input">Enter a phrase</label>
 			<input name="phrase" id="text_phrase-input" placeholder="Enter a search term" "type="text" >
 			<button id="search_btn">Find tweets</button>
-
 	
-<div id="tweets">
-
-</div>
+	
+<article role="main" id="phrase-module">
+		<h1 class="phrase"></h1>
+		<div class="pattern"></div>
+		<footer>
+			<ol class="legend"></ol>
+			<ul class="stats"></ul>
+		</footer>
+</article>
   </body>
 </html>
