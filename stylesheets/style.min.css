@@ -88,7 +88,16 @@ article footer{ box-sizing:border-box;  -moz-box-sizing:border-box;  -webkit-box
 
 }
 .tweetsearch {
-text-align:center
+padding:1em 5%;  
+text-align:center;
+}
+.buttons {
+float:center;
+margin-top:10px;
+}
+.buttons button{
+margin-right:31px;
+margin-left:31px;
 }
 
 .a, .leg-a:before{background-color:rgb(184,64,30)}

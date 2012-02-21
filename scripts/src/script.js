@@ -7,8 +7,8 @@ $(function () {
 		var tweetsearch = $("#text_phrase-input").val();
 	
 	s = new Spotter("twitter.search", 
-						{q:tweetsearch, period:30},
-						{buffer:true, bufferTimeout:200}
+						{q:tweetsearch, period:10},
+						{buffer:true, bufferTimeout:15}
 					    );
 	
 	
@@ -135,7 +135,7 @@ $(function () {
     this.makeImage();
     this.makeLegend();
     this.makeStats();
-    $('#phrase-module').css({position: 'relative',left: 0,display: 'none'}).fadeIn(300);
+    $('#phrase-module').css({position: 'relative',left: 0,display: 'none'}).fadeIn(600);
 	
 	}
 	function Circle(phrase, radius, letter) {
